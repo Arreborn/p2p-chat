@@ -1,0 +1,30 @@
+Swallowed exceptions:
+Check - NetworkManager - ManageClientConnections
+Check - NetworkManager - sendMessage
+Protocol - Decode (managed by debug print at the moment)
+
+Empty else-cases:
+Check - ConversationManager - AssignCurrentConversation
+Check - ConversationSerializer - LoadAll
+
+Potential other error management needed:
+ConversationManager - closeConversation
+Check - NetworkManager - ManageClientConnections
+Check - NetworkManager - getIpAddress
+Check - NetworkManager - sendMessage
+Protocol - Encode
+
+ConversationSerializer - Save
+ConversationSerializer - Load
+
+
+Refactoring:
+ConversationManager - getConversation?
+
+TODO:
+Check - Ensure no new connections can be established on ports already present in connections dict in network manager and/or conversation manager (client ports should be managaged through existing logic)
+Check - Refactor method names to be Pascal-case
+Check - Enable functionality for reconnect button
+Check - Last pass for any stray debug prints
+Check - Change window models title
+
